@@ -3,17 +3,15 @@
 # Applied Databases Final Project
 # Main file - displays menu and calls functions from other files
  
-from colours import (print_header, print_menu_item,
-                     print_prompt, print_info) 
  
-
-# IMPORTS
- 
-# from mysql_functions import (view_speakers, view_attendees_by_company,
-#                              add_new_attendee, view_rooms)
+from mysql_functions import view_rooms #(view_speakers, view_attendees_by_company,
+#                              add_new_attendee)
 # from neo4j_functions import (view_connected_attendees, add_attendee_connection)
 # from recommendations import get_recommendations
  
+from colours import (print_header, print_menu_item,
+                     print_prompt, print_info) 
+  
  
 # MAIN MENU DISPLAY
  
@@ -62,15 +60,14 @@ def main():
             print_info("Coming soon - Add Attendee Connection")
  
         elif choice == "6":
-            # view_rooms()
-            print_info("Coming soon - View Rooms")
+            view_rooms()
  
         elif choice == "7":
             # get_recommendations()
             print_info("Coming soon - Get Recommendations")
  
         elif choice == "x":
-            print_info("Goodbye!")
+            print_info("Goodbye! :)")
             break
  
         else:

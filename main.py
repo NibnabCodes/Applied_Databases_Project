@@ -4,8 +4,8 @@
 # Main file - displays menu and calls functions from other files
  
  
-from mysql_functions import view_rooms #(view_speakers, view_attendees_by_company,
-#                              add_new_attendee)
+from mysql_functions import view_rooms, view_speakers #view_attendees_by_company,
+#                              add_new_attendee
 # from neo4j_functions import (view_connected_attendees, add_attendee_connection)
 # from recommendations import get_recommendations
  
@@ -40,8 +40,7 @@ def main():
         choice = show_main_menu()
  
         if choice == "1":
-            # view_speakers()
-            print_info("Coming soon - View Speakers & Sessions")
+            view_speakers()
  
         elif choice == "2":
             # view_attendees_by_company()

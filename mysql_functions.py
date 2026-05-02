@@ -46,6 +46,81 @@ def view_speakers():
     except pymysql.Error as e:
         print_error(f"{e}")
         
+## Option 2 - VIEW ATTENDEES BY COMPANY
+
+def view_attendees_by_company():
+    try:
+        # Keep asking until valid numeric ID > 0 is entered
+        while True:
+            company_id = print_prompt("Enter Company ID : ")
+            
+            # Check input is numberic
+            try:
+                company_id = int(company_id)
+                if company_id <= 0:
+                    print_error("Company ID must be greater than 0!")
+                    continue
+                break
+            except ValueError:
+                print_error("Company ID must be a number!")
+                continue
+        
+        conn = get_mysql_connection()
+        cursor = conn.cursor()
+        
+        # Check if company exists
+        cursor.execute("SELECT * FROM company WHERE companyID = %s", (company_id,))
+        company = cursor.fetchone()  
+        
+        if not company:
+            print_error(f"Company with ID {company_id} doesn't exist!")
+            cursor.close()
+            conn.close()
+            return
+            
+        # Company exists - show company name
+        print_info(f"{company['companyName']} Attendees")
+        
+        # JOIN tables 
+        query = """
+            SELECT a.attendeeName, a.attendeeDOB, s.sessionTitle,
+                s.speakerName, s.sessionDate, r.roomName
+            FROM attendee a
+            JOIN registration reg ON a.attendeeID = reg.attendeeID
+            JOIN session s ON reg.sessionID = s.sessionID
+            JOIN room r ON s.roomID = r.roomID
+            WHERE a.attendeeCompanyID = %s
+            ORDER BY a.attendeeName
+        """
+        
+        cursor.execute(query, (company_id,))
+        results = cursor.fetchall()
+        
+        cursor.close()
+        conn.close()
+        
+        # Check if any attendees found for this company
+        if not results:
+            print_info(f"No attendees found for {company['companyName']}")
+            return
+        
+        # Display results
+        for row in results:
+            print_data_row(
+                f"{row['attendeeName']:<20} | "
+                f"{str(row['attendeeDOB']):<12} | " 
+                f"{row['sessionTitle']:<35} | "  
+                f"{row['speakerName']:<20} | "
+                f"{str(row['sessionDate']):<12} | " 
+                f"{row['roomName']}" 
+            )
+            
+    except pymysql.Error as e:
+        print_error(f"{e}")   
+
+    
+    
+        
 
 ## Option 6 - VIEW ROOMS
 

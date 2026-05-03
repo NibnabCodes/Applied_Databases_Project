@@ -117,6 +117,63 @@ def view_attendees_by_company():
             
     except pymysql.Error as e:
         print_error(f"{e}")   
+        
+## Option 3 - ADD NEW ATTENDEE
+
+def add_new_attendee():
+    try:
+        print_header("Add New Attendee")
+        print()
+        
+        attendee_id     = print_prompt("Attendee ID : ")
+        attendee_name   = print_prompt("Name : ") 
+        attendee_dob    = print_prompt("DOB : ")
+        attendee_gender = print_prompt("Gender : ")
+        company_id      = print_prompt("Company ID : ")
+        
+        # Check if Gender Male/Female
+        if attendee_gender not in ("Male", "Female"):
+            print_error("Gender must be Male/Female")
+            return 
+        
+        conn   = get_mysql_connection()
+        cursor = conn.cursor()
+        
+        # Check attendee ID does not already exist
+        cursor.execute("SELECT * FROM attendee WHERE attendeeID = %s", (attendee_id,))
+        if cursor.fetchone():
+            print_error(f"Attendee ID: {attendee_id} already exists")
+            cursor.close()
+            conn.close()
+            return
+        
+        # Check company ID exists
+        cursor.execute("SELECT * FROM company WHERE companyID = %s", (company_id,))
+        if not cursor.fetchone():
+            print_error(f"Company ID: {company_id} does not exist")
+            cursor.close()
+            conn.close()
+            return
+        
+        # Insert new attendee into DB
+        query = """
+            INSERT INTO attendee 
+            (attendeeID, attendeeName, attendeeDOB, attendeeGender, attendeeCompanyID)
+            VALUES (%s, %s, %s, %s, %s) 
+        """
+        cursor.execute(query, (attendee_id, attendee_name,
+                               attendee_dob, attendee_gender, company_id))
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+        
+        print_success("Atendee successfully added")
+        
+    except pymysql.Error as e:
+        print_error(f"{e}")
+        
+        
 
     
     

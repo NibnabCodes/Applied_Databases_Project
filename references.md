@@ -12,4 +12,13 @@ https://dev.mysql.com/doc/refman/9.7/en/join.html
 https://pynative.com/python-cursor-fetchall-fetchmany-fetchone-to-read-rows-from-table/  
 https://www.w3schools.com/python/ref_exception_valueerror.asp  
 https://www.w3schools.com/PYTHON/python_mysql_insert.asp
-https://www.geeksforgeeks.org/python/python-if-with-not-operator/ 
+https://www.geeksforgeeks.org/python/python-if-with-not-operator/  
+
+## neo4j_functions.py  
+https://neo4j.com/docs/cypher-manual/current/patterns/  
+https://neo4j.com/docs/api/python-driver/current/api.html  
+https://docs.python.org/3/tutorial/errors.html  
+https://neo4j.com/docs/cypher-cheat-sheet/25/all/#_order_by  
+https://dev.mysql.com/doc/refman/8.0/en/functions.html  
+https://www.w3schools.com/python/ref_string_isnumeric.asp  
+https://www.digitalocean.com/community/tutorials/python-remove-spaces-from-string 

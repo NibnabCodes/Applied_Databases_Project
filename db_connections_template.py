@@ -29,7 +29,7 @@ driver = None
  
 def get_neo4j_driver():
     global driver
-    url = "neo4j://localhost:7687"
+    url = "bolt://localhost:7687"
     driver = GraphDatabase.driver(
         url,
         auth=("neo4j", NEO4J_PASSWORD),

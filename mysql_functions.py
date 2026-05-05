@@ -175,6 +175,8 @@ def add_new_attendee():
 
 ## Option 6 - VIEW ROOMS
 
+rooms_cache = None 
+
 def view_rooms():
     global rooms_cache
     
@@ -194,7 +196,7 @@ def view_rooms():
             conn.close()
         
         # Print header row
-        print_data_row(f"{'roomID':<10} | {'roomName':<20} | {'Capacity'}") # Padding formattera
+        print_data_row(f"{'roomID':<10} | {'roomName':<20} | {'capacity'}") # Padding formattera
         print_data_row("-" * 45)                                            # Divider line
         
         # Print each room

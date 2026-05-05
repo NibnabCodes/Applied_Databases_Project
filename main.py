@@ -6,7 +6,7 @@
  
 from mysql_functions import view_attendees_by_company, view_rooms, view_speakers, view_attendees_by_company, add_new_attendee 
 from neo4j_functions import view_connected_attendees, add_attendee_connection
-# from recommendations import get_recommendations
+from recommendations import get_recommendations
  
 from colours import (print_header, print_menu_item,
                      print_prompt, print_info) 
@@ -57,8 +57,7 @@ def main():
             view_rooms()
  
         elif choice == "7":
-            # get_recommendations()
-            print_info("Coming soon - Get Recommendations")
+            get_recommendations()
  
         elif choice == "x":
             print_info("Goodbye! :)")

@@ -28,4 +28,15 @@ https://www.digitalocean.com/community/tutorials/python-remove-spaces-from-strin
 https://www.w3schools.com/python/gloss_python_comparison_operators.asp  
 https://www.w3schools.com/mysql/mysql_select.asp  
 https://neo4j.com/docs/cypher-manual/current/clauses/merge/  
-https://community.neo4j.com/t/create-a-relationship-between-two-already-existing-nodes-by-one-common-property/46914 
+https://community.neo4j.com/t/create-a-relationship-between-two-already-existing-nodes-by-one-common-property/46914  
+
+## recommendations.py  
+https://dev.mysql.com/doc/refman/9.7/en/join.html  
+https://dev.mysql.com/doc/refman/9.7/en/comparison-operators.html  
+https://neo4j.com/docs/cypher-manual/current/clauses/  
+https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/  
+https://developers.google.com/machine-learning/recommendation/collaborative/basics  
+https://docs.python.org/3/  
+https://www.w3schools.com/mysql/mysql_in.asp  
+
+

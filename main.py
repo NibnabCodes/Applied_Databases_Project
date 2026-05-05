@@ -5,7 +5,7 @@
  
  
 from mysql_functions import view_attendees_by_company, view_rooms, view_speakers, view_attendees_by_company, add_new_attendee 
-from neo4j_functions import view_connected_attendees #, add_attendee_connection
+from neo4j_functions import view_connected_attendees, add_attendee_connection
 # from recommendations import get_recommendations
  
 from colours import (print_header, print_menu_item,
@@ -51,8 +51,7 @@ def main():
             view_connected_attendees()
  
         elif choice == "5":
-            # add_attendee_connection()
-            print_info("Coming soon - Add Attendee Connection")
+            add_attendee_connection() 
  
         elif choice == "6":
             view_rooms()

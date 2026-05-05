@@ -2,6 +2,9 @@
 https://www.geeksforgeeks.org/python/introduction-to-python-colorama/  
 https://github.com/tartley/colorama  
 
+## main.py  
+
+
 ## mysql_functions.py  
 https://dev.mysql.com/doc/refman/8.0/en/functions.html  
 https://docs.python.org/3/tutorial/errors.html  
@@ -21,4 +24,8 @@ https://docs.python.org/3/tutorial/errors.html
 https://neo4j.com/docs/cypher-cheat-sheet/25/all/#_order_by  
 https://dev.mysql.com/doc/refman/8.0/en/functions.html  
 https://www.w3schools.com/python/ref_string_isnumeric.asp  
-https://www.digitalocean.com/community/tutorials/python-remove-spaces-from-string 
+https://www.digitalocean.com/community/tutorials/python-remove-spaces-from-string  
+https://www.w3schools.com/python/gloss_python_comparison_operators.asp  
+https://www.w3schools.com/mysql/mysql_select.asp  
+https://neo4j.com/docs/cypher-manual/current/clauses/merge/  
+https://community.neo4j.com/t/create-a-relationship-between-two-already-existing-nodes-by-one-common-property/46914 

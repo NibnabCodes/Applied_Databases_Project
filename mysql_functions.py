@@ -171,13 +171,7 @@ def add_new_attendee():
         print_success("Atendee successfully added")
         
     except pymysql.Error as e:
-        print_error(f"{e}")
-        
-        
-
-    
-    
-        
+        print_error(f"{e}")  
 
 ## Option 6 - VIEW ROOMS
 

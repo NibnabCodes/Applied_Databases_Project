@@ -4,8 +4,8 @@ https://github.com/tartley/colorama
 
 ## main.py  
 https://www.geeksforgeeks.org/python/making-automatic-module-installer-in-python/  
-
-
+https://medium.com/@firozkaif27/create-a-python-menu-to-run-various-commands-7be4d70cc127  
+https://learn.modernagecoders.com/blog/how-to-build-menu-driven-program-in-python  
 
 ## mysql_functions.py  
 https://dev.mysql.com/doc/refman/8.0/en/functions.html  

@@ -1,3 +1,7 @@
+# mysql_functions.py
+# MySQL Database Functions 
+# for the Conference Management System storted here.
+# Author: Niamh Hogan
 
 import pymysql
 
@@ -5,7 +9,6 @@ from db_connections import get_mysql_connection
 
 from colours import (print_header, print_error, 
                      print_data_row, print_prompt, print_success, print_info) 
-
 
 ## Option 1 - VIEW SPEAKERS & SESSIONS
 
@@ -196,7 +199,7 @@ def view_rooms():
             conn.close()
         
         # Print header row
-        print_data_row(f"{'roomID':<10} | {'roomName':<20} | {'capacity'}") # Padding formattera
+        print_data_row(f"{'roomID':<10} | {'roomName':<20} | {'capacity'}") # Padding formatters
         print_data_row("-" * 45)                                            # Divider line
         
         # Print each room

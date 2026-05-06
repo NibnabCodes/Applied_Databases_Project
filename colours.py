@@ -1,11 +1,12 @@
-# All colorama helper functions for the Conference Management System storted here.
+# colours.py
+# Innovation Feature - All colorama helper functions 
+# for the Conference Management System storted here. 
 # Author: Niamh Hogan
 
 from colorama import init, Fore, Style
 
 # colours reset automatically after every print
 init(autoreset=True)
-
 
 # HEADER - cyan
 def print_header(text):

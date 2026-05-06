@@ -1,5 +1,8 @@
+# recommendations.py
 # Innovation Feature - Attendee Recommendation Engine 
 # Suggests attendees to connect with based on shared sessions attended 
+# Author: Niamh Hogan 
+
 
 import pymysql
 

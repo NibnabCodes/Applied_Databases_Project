@@ -1,9 +1,11 @@
-
-import pymysql 
+# neo4j_functions.py
+# Neo4j Database Functions 
+# for the Conference Management System storted here.
+# Author: Niamh Hogan
 
 from db_connections import get_mysql_connection, get_neo4j_driver
 
-from colours import (print_header, print_prompt, print_error, 
+from colours import (print_prompt, print_error, 
                      print_data_row, print_success, print_info)
 
 ## Option 4 - VIEW CONNECTED ATTENDEES
@@ -174,7 +176,7 @@ def add_attendee_connection():
             neo4j_driver.close()
                 
             print_success(
-                f"Attendee {attendee_id1} is now connected too Attendee {attendee_id2}"
+                f"Attendee {attendee_id1} is now connected to Attendee {attendee_id2}"
             )
             break
             

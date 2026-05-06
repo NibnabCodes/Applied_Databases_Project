@@ -1,5 +1,5 @@
 # db_connections_template.py
-# RENAME THIS FILE TO db_connections.py BEFORE RUNNING
+# RENAME THIS FILE TO db_connections.py BEFORE RUNNING!
 # Then update the passwords below to match your setup
  
 import pymysql

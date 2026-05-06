@@ -1,13 +1,22 @@
 # main.py
-# Conference Management System
+# Conference Management System - Main Menu
 # Applied Databases Final Project
-# Main file - displays menu and calls functions from other files
- 
+# Author: Niamh Hogan
+
+# Auto install required packages
+import subprocess
+import sys
+
+def install_packages():
+    packages = ["pymysql", "neo4j", "colorama"]
+    for package in packages:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        
+install_packages()
  
 from mysql_functions import view_attendees_by_company, view_rooms, view_speakers, view_attendees_by_company, add_new_attendee 
 from neo4j_functions import view_connected_attendees, add_attendee_connection
 from recommendations import get_recommendations
- 
 from colours import (print_header, print_menu_item,
                      print_prompt, print_info) 
   

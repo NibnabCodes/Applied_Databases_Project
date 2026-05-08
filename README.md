@@ -17,7 +17,7 @@ The application provides a menu-driver interface allowing users to:
 - Add new attendees
 - View & create connections between attendees
 - View conference rooms
-- Get attendee recpmmendations based on shared sessions attended
+- Get attendee recommendations based on shared sessions attended
 
 --- 
 
@@ -29,7 +29,7 @@ G00473038/
 ├── colours.py                   - innovation: colorama colour helper functions  
 ├── mysql_functions.py           - all MySQL query functions  
 ├── neo4j_functions.py           - all Neo4j query functions  
-├── recommendations.py           - innovation: recommendtion engine  
+├── recommendations.py           - innovation: recommendation engine  
 ├── db_connections_template.py   - rename this to db_connections.py  
 ├── requirements.txt             - all required Python packages  
 ├── appdbproj.sql                - MySQL database file  
